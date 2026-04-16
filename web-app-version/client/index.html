@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>UTD Elevator Challenge</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+
+    <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div
+            class="flex flex-col gap-6 items-center border-4 border-gray-700 p-4"
+        >
+            <div
+                class="bg-white border-4 border-gray-700 p-4 rounded shadow w-fit"
+            >
+                <div class="flex items-center justify-between mb-4">
+                    <h1 class="text-lg font-bold">Elevator Controls</h1>
+                    <button
+                        class="bg-red-500 text-white px-3 py-1 text-xs rounded"
+                    >
+                        Reset
+                    </button>
+                </div>
+
+                <div class="flex gap-2 mb-4">
+                    <input
+                        id="pickup-floor"
+                        type="number"
+                        min="0"
+                        max="10"
+                        placeholder="Pickup"
+                        class="w-20 border rounded px-2 py-1 text-sm"
+                    />
+                    <input
+                        id="drop-floor"
+                        type="number"
+                        min="0"
+                        max="10"
+                        placeholder="Drop"
+                        class="w-20 border rounded px-2 py-1 text-sm"
+                    />
+                    <button
+                        class="bg-blue-500 text-white px-3 py-1 text-sm rounded"
+                    >
+                        Call
+                    </button>
+                </div>
+            </div>
+
+            <div id="elevator-status"></div>
+
+            <div class="flex gap-4 items-start">
+                <div class="flex flex-col border-4 border-gray-700 bg-white">
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2 bg-gray-200"
+                    >
+                        <span>10</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>9</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>8</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>7</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>6</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>5</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>4</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>3</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>2</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>1</span>
+                    </div>
+                    <div
+                        class="flex items-center justify-between w-40 h-12 border-t px-2"
+                    >
+                        <span>0</span>
+                    </div>
+                </div>
+
+                <div
+                    class="relative w-20 h-[535px] border-4 border-gray-700 bg-gray-200"
+                >
+                    <div
+                        id="elevator"
+                        class="absolute bottom-0 w-full h-12 bg-yellow-400 flex items-center justify-center font-bold transition-all duration-500"
+                    >
+                        🛗
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="/app.js"></script>
+</html>

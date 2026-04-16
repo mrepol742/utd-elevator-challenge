@@ -9,6 +9,8 @@
   },
   "scripts": {
     "test": "mocha tests/elevator_test.cjs",
+    "dev": "concurrently \"npm run server\" \"npm run start\"",
+    "start": "cd web-app-version/client && python3 -m http.server 8080",
     "server": "cd web-app-version && nodemon server/index.js"
   },
   "repository": {
@@ -27,5 +29,10 @@
     "chai": "^3.5.0",
     "mocha": "^9.1.1",
     "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
   }
 }
